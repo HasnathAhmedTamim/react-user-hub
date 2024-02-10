@@ -1,6 +1,31 @@
 // import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
 const Modal = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // console.log("form clicked");
+
+    const form = e.target;
+    const image = form.image.value;
+    const firstName = form.firstName.value;
+    const lastName = form.lastName.value;
+    const email = form.email.value;
+    const address = form.address.value;
+    const companyName = form.companyName.value;
+
+    const newUser = {
+      image,
+      firstName,
+      lastName,
+      email,
+      address,
+      companyName,
+    };
+
+    console.log(newUser);
+  };
+
   return (
     <div>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
@@ -12,11 +37,11 @@ const Modal = () => {
       </button>
       <dialog id="my_modal_3" className="modal ">
         <div className="modal-box ">
-          <form  method="dialog ">
+          <form onSubmit={handleSubmit}>
             {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            {/* <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕
-            </button>
+            </button> */}
             <div className="border-b border-gray-900/10 pb-12">
               <h2 className="text-base font-semibold leading-7 text-gray-900">
                 Personal Information
@@ -34,12 +59,19 @@ const Modal = () => {
                     Avatar
                   </label>
                   <div className="mt-2">
-                    <input
+                    {/* <input
                       type="file"
                       autoComplete="avatar-name"
                       name="avatar-name"
                       id="avatar-name"
                       className="file-input w-full block rounded-md border-0 py-1.5 p-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    /> */}
+                    <input
+                      type="text"
+                      name="image"
+                      id="image"
+                      autoComplete="given-name"
+                      className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -53,7 +85,7 @@ const Modal = () => {
                   <div className="mt-2">
                     <input
                       type="text"
-                      name="first-name"
+                      name="firstName"
                       id="first-name"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -71,7 +103,7 @@ const Modal = () => {
                   <div className="mt-2">
                     <input
                       type="text"
-                      name="last-name"
+                      name="lastName"
                       id="last-name"
                       autoComplete="family-name"
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -127,7 +159,7 @@ const Modal = () => {
                   <div className="mt-2">
                     <input
                       type="text"
-                      name="street-address"
+                      name="address"
                       id="street-address"
                       autoComplete="street-address"
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -144,7 +176,7 @@ const Modal = () => {
                   <div className="mt-2">
                     <input
                       type="text"
-                      name="company-name"
+                      name="companyName"
                       id="company-name"
                       autoComplete="company-name"
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -152,7 +184,9 @@ const Modal = () => {
                   </div>
                 </div>
 
-                <div className="sm:col-span-2 sm:col-start-1">
+                <button className="text-center items-center">Submit</button>
+
+                {/* <div className="sm:col-span-2 sm:col-start-1">
                   <label
                     htmlFor="city"
                     className="block text-sm font-medium leading-6 text-gray-900"
@@ -204,14 +238,10 @@ const Modal = () => {
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </form>
-          <input
-            type="submit"
-            className="p-2 bg-primary cursor-pointer mt-2 w-full"
-          />
 
           <p className="py-4">Press ESC key or click on ✕ button to close</p>
         </div>
