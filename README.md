@@ -1,4 +1,4 @@
-# React Setup with Tailwind, DaisyUI, React Router, and Framer Motion
+#User List Application with ReactJS and setup with  Tailwind, DaisyUI, React Router, and Framer Motion
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
