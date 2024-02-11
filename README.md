@@ -53,6 +53,6 @@ If you would like to contribute to the project, please follow these guidelines:
 
 ## Contact
 
-If you have any questions or concerns, feel free to reach out to the project maintainer(s):
+If you have any questions or concerns, feel free to reach out me:
 - [LinkedIn](https://www.linkedin.com/in/hasnath-ahmed-tamim/)
 - [FaceBook](https://www.facebook.com/HasnathAhmedTamim)
