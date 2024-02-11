@@ -110,7 +110,7 @@ const AllUsers = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-4 container mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-4 container mx-auto mb-12 sm:mb-0 md:mb-0"
       >
         {filterUsers.map((user) => (
           <User key={user.id} user={user}></User>
