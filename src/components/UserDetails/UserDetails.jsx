@@ -8,7 +8,7 @@ const UserDetails = () => {
   const user = usersDetails.users.find((user) => user.id === idInt);
   console.log(user);
   return (
-    <div className=" mx-auto container">
+    <div className=" mx-auto container flex-wrap">
       <div className="  bg-gradient-to-r from-blue-800 to-cyan-800 sm:p-34 lg:p-24 md:p-12  hover:scale-90 transition-all duration-300  ">
         <div className="items-center">
           <h1 className="text-4xl  font-bold mb-4 py-2 text-white ">

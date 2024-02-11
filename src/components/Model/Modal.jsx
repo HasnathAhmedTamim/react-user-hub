@@ -15,6 +15,7 @@ const Modal = () => {
     const companyName = form.companyName.value;
 
     const newUser = {
+      id: Date.now(),
       image,
       firstName,
       lastName,
@@ -24,6 +25,12 @@ const Modal = () => {
     };
 
     console.log(newUser);
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(newUser);
+
+    localStorage.setItem("users", JSON.stringify(users));
+    document.getElementById("my_modal_3").close();
   };
 
   return (
@@ -184,7 +191,9 @@ const Modal = () => {
                   </div>
                 </div>
 
-                <button className="text-center items-center">Submit</button>
+                <button type="submit" className="text-center items-center">
+                  Submit
+                </button>
 
                 {/* <div className="sm:col-span-2 sm:col-start-1">
                   <label

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const User = ({ user }) => {
   const { id, image, firstName, lastName, email, address, company } = user;
+  
   return (
     <div className="p-2 hover:scale-90 transition-all duration-300">
       <div className="card p-2  bg-gradient-to-r from-blue-300 to-cyan-500 lg:card-side    items-center  hover:bg-slate-100 shadow-md shadow-violet-300">

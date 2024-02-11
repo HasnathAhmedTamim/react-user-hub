@@ -7,8 +7,9 @@ const Root = () => {
       <div className="">
         <Header></Header>
       </div>
-      <div className="mx-auto container py-12">
+      <div className="container mx-auto">
         <Outlet></Outlet>
+        
       </div>
     </div>
   );
