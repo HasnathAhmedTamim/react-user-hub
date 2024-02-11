@@ -6,32 +6,12 @@
 
 This project is a React setup featuring Tailwind CSS with DaisyUI, React Router, and Framer Motion. It includes various components such as AllUsers, ErrorPage, Header, Modal for form, Root for outlet, User for card display, and UserDetails for displaying user page information. These components utilize useState, useEffect for fetching API data, filtering data, and sorting.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Installation
 
 1. Clone the repository:
 
 git clone https://github.com/yourusername/yourrepository.git
-
-
-2. Navigate to the project directory:
-
-cd yourrepository
-
-
-3. Install dependencies:
-
-npm install npm start
-
-
-This will start the development server and open the application in your default web browser.
 
 ## Components
 
@@ -74,9 +54,6 @@ If you would like to contribute to the project, please follow these guidelines:
 5. Push to the branch: `git push origin feature-name`
 6. Submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
