@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const User = ({ user }) => {
   const { id, image, firstName, lastName, email, address, company } = user;
-  
+
   return (
     <Link to={`/user/${id}`} className="cursor-pointer">
       <div className="p-2 hover:scale-90 transition-all duration-300">

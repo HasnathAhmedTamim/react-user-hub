@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import User from "../User/User";
 import Modal from "../Model/Modal";
+// motion
+import { motion } from "framer-motion";
+// variant
+import { fadeIn } from "../../variants";
 
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
@@ -66,7 +70,13 @@ const AllUsers = () => {
 
   return (
     <>
-      <div className="navbar p-16 items-center  bg-gradient-to-r from-cyan-800 to-blue-800">
+      <motion.div
+        variants={fadeIn("down", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="navbar flex-wrap p-16 items-center  bg-gradient-to-r from-cyan-800 to-blue-800"
+      >
         <div className="flex-1 flex-wrap    gap-2">
           <a className=" btn text-xl  ">All Users ({users.length}) </a>
           <input
@@ -76,7 +86,7 @@ const AllUsers = () => {
             className="input input-bordered input-info font-semibold "
           />
           <select
-            className="select select-info font-semibold"
+            className="select select-info font-semibold sm:mb-0 mb-2"
             value={sortBy}
             onChange={handleSortChange}
           >
@@ -89,16 +99,22 @@ const AllUsers = () => {
             <option value="companyName">CompanyName</option>
           </select>
         </div>
-        <div className="flex-none">
+        <div className=" flex-none ">
           <Modal addNewUser={addNewUser}></Modal>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-4 container mx-auto">
+      <motion.div
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-4 container mx-auto"
+      >
         {filterUsers.map((user) => (
           <User key={user.id} user={user}></User>
         ))}
-      </div>
+      </motion.div>
       <div className={dataLength === users.length ? "hidden " : ""}>
         <button
           onClick={() => setDataLength(users.length)}

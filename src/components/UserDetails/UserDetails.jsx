@@ -1,5 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+// motion
+import { motion } from "framer-motion";
+// variant
+import { fadeIn } from "../../variants";
 const UserDetails = () => {
   const usersDetails = useLoaderData([]);
   const { id } = useParams();
@@ -9,7 +12,13 @@ const UserDetails = () => {
   console.log(user);
   return (
     <div className=" mx-auto container flex-wrap">
-      <div className="  bg-gradient-to-r from-blue-800 to-cyan-800 sm:p-34 lg:p-24 md:p-12  hover:scale-90 transition-all duration-300  ">
+      <motion.div
+        variants={fadeIn("left", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="  bg-gradient-to-r from-blue-800 to-cyan-800 sm:p-34 lg:p-24 md:p-12    "
+      >
         <div className="items-center">
           <h1 className="text-4xl  font-bold mb-4 py-2 text-white ">
             {" "}
@@ -53,7 +62,7 @@ const UserDetails = () => {
             Back to Home
           </button>
         </Link> */}
-      </div>
+      </motion.div>
     </div>
   );
 };
