@@ -73,10 +73,10 @@ const AllUsers = () => {
             onChange={(e) => setSearch(e.target.value)}
             type="text"
             placeholder="Search user here"
-            className="input input-bordered input-info "
+            className="input input-bordered input-info font-semibold "
           />
           <select
-            className="select select-info "
+            className="select select-info font-semibold"
             value={sortBy}
             onChange={handleSortChange}
           >
@@ -98,15 +98,14 @@ const AllUsers = () => {
         {filterUsers.map((user) => (
           <User key={user.id} user={user}></User>
         ))}
-
-        <div className={dataLength === users.length ? "hidden " : ""}>
-          <button
-            onClick={() => setDataLength(users.length)}
-            className="btn btn-primary font-bold hover:bg-violet-900 text-white "
-          >
-            View All Users
-          </button>
-        </div>
+      </div>
+      <div className={dataLength === users.length ? "hidden " : ""}>
+        <button
+          onClick={() => setDataLength(users.length)}
+          className="btn btn-primary font-bold hover:bg-violet-900 text-white "
+        >
+          View All Users
+        </button>
       </div>
     </>
   );

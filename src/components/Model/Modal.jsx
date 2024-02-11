@@ -18,8 +18,8 @@ const Modal = ({ addNewUser }) => {
       firstName,
       lastName,
       email,
-      address,
-      company,
+      address: { address: address },
+      company: { name: company },
     };
 
     // const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -49,7 +49,7 @@ const Modal = ({ addNewUser }) => {
             </button> */}
             <div className="border-b border-gray-900/10 pb-12">
               <h2 className="text-base font-semibold leading-7 text-gray-900">
-                Personal Information
+                User Personal Information
               </h2>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
@@ -61,13 +61,13 @@ const Modal = ({ addNewUser }) => {
                     Avatar url
                   </label>
                   <div className="mt-2">
-                    {/* <input
+                    <input
                       type="file"
                       autoComplete="avatar-name"
-                      name="avatar-name"
+                      name="image"
                       id="avatar-name"
                       className="file-input w-full block rounded-md border-0 py-1.5 p-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    /> */}
+                    />
                     <input
                       type="text"
                       name="image"
