@@ -1,17 +1,14 @@
-#User List Application with ReactJS and setup with  Tailwind, DaisyUI, React Router, and Framer Motion
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# User List Application with ReactJS and setup with Tailwind, DaisyUI, React Router, and Framer Motion
 
 ## Description
 
 This project is a React setup featuring Tailwind CSS with DaisyUI, React Router, and Framer Motion. It includes various components such as AllUsers, ErrorPage, Header, Modal for form, Root for outlet, User for card display, and UserDetails for displaying user page information. These components utilize useState, useEffect for fetching API data, filtering data, and sorting.
 
+## Project 
 
-## Installation
+1. repository: https://github.com/yourusername/yourrepository.git
 
-1. Clone the repository:
-
-git clone https://github.com/yourusername/yourrepository.git
+2. Live link: https://github.com/yourusername/yourrepository.git
 
 ## Components
 
@@ -54,9 +51,10 @@ If you would like to contribute to the project, please follow these guidelines:
 5. Push to the branch: `git push origin feature-name`
 6. Submit a pull request.
 
-
 ## Contact
 
 If you have any questions or concerns, feel free to reach out to the project maintainer(s):
-
-- [Your Name](mailto:youremail@example.com)
+- [HasnathAhmedTamim](mailto:youremail@example.com)
+- [LinkedIn](mailto:youremail@example.com)
+- [GitHub](mailto:youremail@example.com)
+- [FaceBook](mailto:youremail@example.com)
