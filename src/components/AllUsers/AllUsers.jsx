@@ -25,6 +25,7 @@ const AllUsers = () => {
   useEffect(() => {
     filterUser();
   }, [users, dataLength, sortBy, search]);
+  
 
   const fetchData = async () => {
     try {
