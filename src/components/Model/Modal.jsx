@@ -1,10 +1,8 @@
 // import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
-const Modal = () => {
+const Modal = ({ addNewUser }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // console.log("form clicked");
 
     const form = e.target;
     const image = form.image.value;
@@ -12,7 +10,7 @@ const Modal = () => {
     const lastName = form.lastName.value;
     const email = form.email.value;
     const address = form.address.value;
-    const companyName = form.companyName.value;
+    const company = form.company.value;
 
     const newUser = {
       id: Date.now(),
@@ -21,15 +19,15 @@ const Modal = () => {
       lastName,
       email,
       address,
-      companyName,
+      company,
     };
 
-    console.log(newUser);
+    // const users = JSON.parse(localStorage.getItem("users")) || [];
+    // users.push(newUser);
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    users.push(newUser);
+    addNewUser(newUser);
 
-    localStorage.setItem("users", JSON.stringify(users));
+    // localStorage.setItem("users", JSON.stringify(users));
     document.getElementById("my_modal_3").close();
   };
 
@@ -53,9 +51,6 @@ const Modal = () => {
               <h2 className="text-base font-semibold leading-7 text-gray-900">
                 Personal Information
               </h2>
-              <p className="mt-1 text-sm leading-6 text-gray-600">
-                Use a permanent address where you can receive mail.
-              </p>
 
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
                 <div className="col-span-full">
@@ -63,7 +58,7 @@ const Modal = () => {
                     htmlFor="avatar-name"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
-                    Avatar
+                    Avatar url
                   </label>
                   <div className="mt-2">
                     {/* <input
@@ -183,17 +178,26 @@ const Modal = () => {
                   <div className="mt-2">
                     <input
                       type="text"
-                      name="companyName"
+                      name="company"
                       id="company-name"
                       autoComplete="company-name"
                       className="block w-full rounded-md border-0 py-1.5 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
+                  <button
+                    type="submit"
+                    className=" bg-rose-700 p-4 font-bold text-sm text-slate-50 rounded-lg mt-4"
+                  >
+                    Submit
+                  </button>
                 </div>
 
-                <button type="submit" className="text-center items-center">
+                {/* <button
+                  type="submit"
+                  className=" bg-rose-700 p-4 rounded-lg col-span-1"
+                >
                   Submit
-                </button>
+                </button> */}
 
                 {/* <div className="sm:col-span-2 sm:col-start-1">
                   <label
@@ -252,7 +256,7 @@ const Modal = () => {
             </div>
           </form>
 
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
+          <p className="py-4">Press ESC key to close</p>
         </div>
       </dialog>
     </div>

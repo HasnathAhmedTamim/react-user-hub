@@ -6,6 +6,11 @@
 .my-font {
     @apply font-bold text-sm text-red-900 font-sans p-1;
 }
+
+.text-color {
+    @apply text-blue-950
+}
+
 /* body{
     background-color: bg-violet-800;
 } */

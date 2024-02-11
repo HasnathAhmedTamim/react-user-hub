@@ -23,7 +23,7 @@ const User = ({ user }) => {
             </h2>
           </Link>
           <hr className="border-solid border border-black" />
-          <div className="items-start justify-start p-1  bg-sky-50 rounded-lg ">
+          <div className="items-start justify-start p-1  bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-lg text-color">
             <p>
               <span className="my-font ">Email:</span>{" "}
               <span className="font-medium">{email}</span>{" "}
@@ -42,6 +42,7 @@ const User = ({ user }) => {
             <p>
               <span className="my-font">Company Name : </span>
               <span className="font-medium">{company.name}.</span>
+
               <br />
               {/* <span className="font-medium">{company?.title}</span> */}
             </p>
