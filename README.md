@@ -6,9 +6,9 @@ This project is a React setup featuring Tailwind CSS with DaisyUI, React Router,
 
 ## Project 
 
-1. repository: https://github.com/yourusername/yourrepository.git
+1. [repository](https://github.com/HasnathAhmedTamim/react-user-hub)
 
-2. Live link: https://github.com/yourusername/yourrepository.git
+2. [Live link](https://react-userlist-application.netlify.app/)
 
 ## Components
 
@@ -54,7 +54,5 @@ If you would like to contribute to the project, please follow these guidelines:
 ## Contact
 
 If you have any questions or concerns, feel free to reach out to the project maintainer(s):
-- [HasnathAhmedTamim](mailto:youremail@example.com)
-- [LinkedIn](mailto:youremail@example.com)
-- [GitHub](mailto:youremail@example.com)
-- [FaceBook](mailto:youremail@example.com)
+- [LinkedIn](https://www.linkedin.com/in/hasnath-ahmed-tamim/)
+- [FaceBook](https://www.facebook.com/HasnathAhmedTamim)
